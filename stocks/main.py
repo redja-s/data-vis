@@ -13,10 +13,11 @@ def main():
     add_data_for_set("./stocks/data/microsoft.csv", "C4")
 
     ax = plt.gca()
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+    plt.subplots_adjust(bottom=0.2)
 
-    plt.xlabel("Date")
+    plt.xlabel("Date", fontsize=9)
     plt.ylabel("Closing Price ($)")
     plt.xticks(rotation=90)
     plt.title("Historical Stock Price")
