@@ -20,8 +20,10 @@ def main():
     plt.ylabel("Closing Price ($)")
     plt.xticks(rotation=90)
     plt.title("Historical Stock Price")
-
     plt.legend()
+
+    output_file = os.path.join(os.path.dirname(__file__), "output.png")
+    plt.savefig(output_file)
     plt.show()
 
 

@@ -1,4 +1,5 @@
 import math
+import os
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -29,6 +30,9 @@ def main():
     plt.ylabel("y")
     plt.grid(axis="x")
     plt.legend()
+
+    output_file = os.path.join(os.path.dirname(__file__), "output.png")
+    plt.savefig(output_file)
     plt.show()
 
 
